@@ -1,0 +1,17 @@
+
+global processname = "testsemop";
+
+function logit( opcount ) {
+        if (execname() == $processname) {
+                printf("Number of semaphore ops is %d\n" , nsops);
+        }
+}
+
+probe syscall.semop {
+        logit(nsops);
+}
+
+probe syscall.semtimedop {
+        logit(nsops);
+}
+
