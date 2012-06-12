@@ -29,13 +29,6 @@
 #define TEST_MAX_TIME_MAX 1000 /* miliseconds - sanity check */
 #define TEST_STD_DEV_MAX 11
 
-#define MEMSIZE_1          128
-#define MEMSIZE_2        25000
-#define MEMSIZE_3       100000
-#define ITER_SIM_TX      10000
-#define CLR_MMAP_TX       2500
-#define CLR_MMAP_CNT     35000
-#define MAX_MMAP_CNT    200000
 
 /*-------------------------------------------------------------------*/
 int main(int argc, char *argv[])
