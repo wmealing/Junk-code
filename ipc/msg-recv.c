@@ -8,20 +8,20 @@
 int main() {
 
   int i = 0;
+  int ret = 0;
   int msqid = 65536;
   struct message {
     long type;
     char text[20];
   } msg;
 
-  long msgtyp = 0;
+  long msgtype = 0;
 
   for(i = 0; i < NUM_MSG; i++) {
-	if (msgrcv(msqid, (void *) &msg, sizeof(msg.text), msgtyp, MSG_NOERROR) == 0) {
-		printf(".");
-	}
-	else {
-      printf("ERROR: %s\n", strerror(errno));
+	ret = msgrcv(msqid, (void *) &msg, sizeof(msg.text), msgtype, MSG_NOERROR);
+
+	if (errno) {
+	      printf("ERROR: %s\n", strerror(errno));
 	}
   }
 
