@@ -21,7 +21,7 @@
 #include <dirent.h>
 
 /* Stop after KLOOPS * 1000 iterations */
-#define KLOOPS              10
+#define KLOOPS              100 
 
 /* YOU WILL NEED TO MODIFY THESE */ 
 #define TEST_MIN_TIME_MAX 100 /* miliseconds - sanity check */

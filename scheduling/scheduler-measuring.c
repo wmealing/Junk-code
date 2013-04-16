@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <sched.h>
 
-#define	PRIORITY	99
-#define	MAX_PAUSE	10000
+#define	PRIORITY 	10
+#define	MAX_PAUSE	10000 
 
 static uint64_t get_tsc() {
 	unsigned a, d;
